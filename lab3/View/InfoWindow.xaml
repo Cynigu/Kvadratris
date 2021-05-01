@@ -1,0 +1,26 @@
+﻿<Window x:Class="lab3.View.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab3.View"
+        mc:Ignorable="d"
+         Title="Информация о программе" Height="254.6" Width="531.4" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="250*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox Content="Заставка" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center"
+                  x:Name="checkBox"
+                  Unchecked="checkBox_Unchecked" Checked="checkBox_Checked"/>
+        <TextBlock  TextWrapping="Wrap" 
+                    Grid.ColumnSpan="2" Height="168" Width="505" FontSize="14"><Run Text="Автор: Тюлькина ИринаГруппа: 494  "/><LineBreak/><Run Text="Задача: Приложение для посторения графика функции Квадратриса. Пользователь задает правую и левую границу, шаг, коэффициенты. При невозможности построить график функции в заданном интервале пользователю выдается предупреждение об этом с предложением сменить границы построения. Если график функции из-за коэффициентов вырождается в точку или не может быть построен пользователь также видит предупреждение."/></TextBlock>
+        <TextBlock x:Name="textCountOpen" Grid.Column="1" Height="23" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center"/>
+    </Grid>
+
+</Window>
